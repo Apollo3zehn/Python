@@ -6,7 +6,10 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "none"
+            "console": "none",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}\\S1_Framework"
+            }
         }
     ]
 }

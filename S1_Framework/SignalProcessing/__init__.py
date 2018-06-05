@@ -1,1 +1,3 @@
-from .FftHelper import *
+from . import FftHelper
+
+print("FftHelper imported.")
