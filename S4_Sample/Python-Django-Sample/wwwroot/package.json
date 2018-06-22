@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "dependencies": {
+    "@aspnet/signalr": "1.0.0",
+    "@types/chart.js": "2.7.17",
+    "@types/jquery": "3.3.1",
+    "@types/knockout": "3.4.54",
+    "bootstrap": "4.0.0",
+    "chart.js": "2.7.2",
+    "font-awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "knockout": "3.5.0-rc",
+    "moment": "2.22.1",
+    "popper.js": "1.14.3"
+  }
+}

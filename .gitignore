@@ -1,3 +1,8 @@
 S2_Internal
 
 **/__pycache__
+**/node_modules/
+
+**/*.db
+**/*.db-journal
+**/*.sqlite3

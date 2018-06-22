@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
+    "python.linting.pylintArgs": [
+        "--init-hook",
+        "import sys; sys.path.insert(0, 'S1_Framework')",
+        "--disable",
+        "C0103,C0111,C0301,C0304,C0413,W0401"
+    ]
+}

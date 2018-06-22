@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wetterstation</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static "/node_modules/bootstrap/dist/css/bootstrap.css" %}" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Wetterstation</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            fk-wind:
+          </span>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        <h1 class="display-4 my-5 text-center">Predicted world population (million) in 2050</h1>
+        <canvas id="bar-chart" width="800" height="450"></canvas>
+        <hr />
+        <footer>
+            <p>&copy; 2018 - Wetterstation</p>
+        </footer>
+    </div>
+
+    <script src="{% static "/node_modules/jquery/dist/jquery.js" %}"></script>
+    <script src="{% static "/node_modules/bootstrap/dist/js/bootstrap.js" %}"></script>
+    <script src="{% static "/node_modules/chart.js/dist/Chart.js" %}"></script>
+    <script src="{% static "/js/site.js" %}"></script>
+    <!-- <script src="~/js/site.js" asp-append-version="true"></script> -->
+
+</body>
+</html>

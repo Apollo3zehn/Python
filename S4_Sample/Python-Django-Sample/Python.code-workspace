@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/__pycache__*": true,
+			"**/__init__.py": false,
+			".gitignore": true,
+			".vscode": false,
+		}
+	}
+}

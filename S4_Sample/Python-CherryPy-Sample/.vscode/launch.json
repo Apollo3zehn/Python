@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [ 
+        {
+            "name": "Python Experimental: Terminal (integrated)",
+            "type": "pythonExperimental",
+            "request": "launch",
+            "program": "${workspaceRoot}/python/Startup.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
