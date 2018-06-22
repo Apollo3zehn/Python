@@ -4,12 +4,12 @@
         
         {
             "name": "Python",
-            "type": "python",
+            "type": "pythonExperimental",
             "request": "launch",
             "program": "${file}",
-            "console": "none",
+            "console": "integratedTerminal",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}\\S1_Framework"
+                "PYTHONPATH": "${workspaceFolder}\\S1_Framework;${workspaceFolder}\\S2_Internal"
             }
         }
     ]
