@@ -1,7 +1,7 @@
 import numpy
 from S1_Framework import SpectralAnalysis
 
-def testFFTGeneral():
+def FFTGeneralTest():
 
     # Preparation
     fs = 10

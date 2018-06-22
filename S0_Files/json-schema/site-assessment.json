@@ -1,0 +1,116 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "tbd",
+    "title": "Site assessment calculation",
+    "type": "object",
+    "definitions": {
+        "obstacle-base": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "coordinates": {
+                    "type": "object",
+                    "properties": {
+                        "GK-Easting": {
+                            "type": "number"
+                        },
+                        "GK-Northing": {
+                            "type": "number"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "coordinates"
+            ]
+        },
+        "WTG": {
+            "allOf": [
+                { 
+                    "$ref": "#/definitions/obstacle-base" 
+                },
+                {
+                    "properties": {
+                        "hub-height": {
+                            "title": "Hub height",
+                            "description": "Height of the centre of the swept area of the wind turbine rotor above the ground at the tower in meters.",
+                            "type": "number"
+                        },
+                        "rotor-diameter": {
+                            "title": "Rotor diameter",
+                            "description": "Diameter of the rotor in meters.",
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "hub-height",
+                        "rotor-diameter"
+                    ]
+                }
+            ]
+        },
+        "obstacle-WTG": {
+            "allOf": [
+                { 
+                    "$ref": "#/definitions/WTG" 
+                },
+                {
+                    "properties": {
+                        "in-operation": {
+                            "title": "Operating status",
+                            "description": "If false, the WTG will be treated as a simple obstacle.",
+                            "type": "boolean",
+                            "default": true
+                        }
+                    },
+                    "required": [
+                        "in-operation"
+                    ]
+                }
+            ]
+        },
+        "obstacle-other": {
+            "allOf": [
+                { 
+                    "$ref": "#/definitions/obstacle-base" 
+                },
+                {
+                    "properties": {
+                        "height": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "height"
+                    ]
+                }
+            ]
+        }
+    },
+    "properties": {
+        "coordinates-format": {
+            "type": "string",
+            "enum": ["Gauß-Krüger (GK)"],
+            "default": "Gauß-Krüger (GK)"
+        },
+        "WTG": { "$ref": "#/definitions/WTG" },
+        "obstacles-WTG": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/obstacle-WTG" }
+        },
+        "obstacles-other": {
+            "type": "array",
+            "title": "",
+            "items": { "$ref": "#/definitions/obstacle-other" }
+        }
+    },
+    "required": [
+        "coordinates-format",
+        "WTG",
+        "obstacles-WTG",
+        "obstacles-other"
+    ]
+}

@@ -7,7 +7,7 @@
             "type": "pythonExperimental",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal",
+            "console": "externalTerminal",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}\\S1_Framework;${workspaceFolder}\\S2_Internal"
             }

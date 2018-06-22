@@ -1,0 +1,52 @@
+{
+    "coordinates-format": "Gauß-Krüger (GK)",
+    "WTG":{
+        "name": "Adwen AD8-180",
+        "hub-height": 150,
+        "rotor-diameter": 180,
+        "coordinates": {
+            "GK-Easting": 197888.7,
+            "GK-Northing": 1818181.98
+        }
+    },
+    "obstacles-WTG": [
+        {
+            "name": "Vestas V47 (17448)",
+            "hub-height": 50,
+            "rotor-diameter": 120,
+            "in-operation": false,
+            "coordinates": {
+                "GK-Easting": 197888.7,
+                "GK-Northing": 1818181.98
+            }
+        },
+        {
+            "name": "Vestas V47 (27488)",
+            "hub-height": 50,
+            "rotor-diameter": 120,
+            "in-operation": true,
+            "coordinates": {
+                "GK-Easting": 197890.7,
+                "GK-Northing": 1981818.8
+            }
+        }
+    ],
+    "obstacles-other": [
+        {
+            "name": "Tree",
+            "height": 50,
+            "coordinates": {
+                "GK-Easting": 197899.7,
+                "GK-Northing": 197890.7
+            }
+        },
+        {
+            "name": "BEG",
+            "height": 50,
+            "coordinates": {
+                "GK-Easting": 197889.7,
+                "GK-Northing": 197800.7
+            }
+        }
+    ]
+}

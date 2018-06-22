@@ -4,7 +4,6 @@ S2_Internal
 **/__pycache__
 **/node_modules/
 
-**/.noseids
 **/*.db
 **/*.db-journal
 **/*.sqlite3
