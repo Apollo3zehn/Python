@@ -52,7 +52,7 @@
                 }
             ]
         },
-        "obstacle-WTG": {
+        "WTG-obstacle": {
             "allOf": [
                 { 
                     "$ref": "#/definitions/WTG" 
@@ -72,7 +72,7 @@
                 }
             ]
         },
-        "obstacle-other": {
+        "other-obstacle": {
             "allOf": [
                 { 
                     "$ref": "#/definitions/obstacle-base" 
@@ -99,18 +99,18 @@
         "WTG": { "$ref": "#/definitions/WTG" },
         "obstacles-WTG": {
             "type": "array",
-            "items": { "$ref": "#/definitions/obstacle-WTG" }
+            "items": { "$ref": "#/definitions/WTG-obstacle" }
         },
         "obstacles-other": {
             "type": "array",
             "title": "",
-            "items": { "$ref": "#/definitions/obstacle-other" }
+            "items": { "$ref": "#/definitions/other-obstacle" }
         }
     },
     "required": [
         "coordinates-format",
         "WTG",
-        "obstacles-WTG",
-        "obstacles-other"
+        "WTG-obstacles",
+        "other-obstacles"
     ]
 }

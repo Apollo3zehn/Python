@@ -9,7 +9,7 @@
             "GK-Northing": 1818181.98
         }
     },
-    "obstacles-WTG": [
+    "WTG-obstacles": [
         {
             "name": "Vestas V47 (17448)",
             "hub-height": 50,
@@ -31,7 +31,7 @@
             }
         }
     ],
-    "obstacles-other": [
+    "other-obstacles": [
         {
             "name": "Tree",
             "height": 50,

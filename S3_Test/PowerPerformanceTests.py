@@ -1,8 +1,8 @@
-import sys
 import os
 import json
 import logging
 
+from S1_Framework import Serialization
 from S2_Internal import PowerPerformance
 
 # https://code.visualstudio.com/docs/languages/json#_mapping-in-the-user-settings
@@ -17,6 +17,7 @@ def GeneralTest():
     with open(filePath) as fileStream:
         data = json.load(fileStream)
         
-    PowerPerformance.SiteAssessment.Calculate(data, logger)
+    configuration = Serialization.ToDynamic(data)
+    PowerPerformance.SiteAssessment.Calculate(configuration, logger)
 
     raise Exception()
