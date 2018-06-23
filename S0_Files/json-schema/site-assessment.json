@@ -97,11 +97,11 @@
             "default": "Gauß-Krüger (GK)"
         },
         "WTG": { "$ref": "#/definitions/WTG" },
-        "obstacles-WTG": {
+        "WTG-obstacles": {
             "type": "array",
             "items": { "$ref": "#/definitions/WTG-obstacle" }
         },
-        "obstacles-other": {
+        "other-obstacles": {
             "type": "array",
             "title": "",
             "items": { "$ref": "#/definitions/other-obstacle" }

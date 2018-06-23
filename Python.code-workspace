@@ -20,6 +20,7 @@
 				"url": "./S0_Files/json-schema/site-assessment.json"
 			},
 		],
+		"jupyter.appendResults": true,
 		"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
 		"python.linting.pylintArgs": [
 			"--init-hook",
