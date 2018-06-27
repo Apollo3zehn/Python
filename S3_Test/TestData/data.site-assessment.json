@@ -1,51 +1,86 @@
 {
-    "coordinates-format": "Gauß-Krüger (GK)",
-    "WTG":{
+    "WME-set": [
+        {
+            "name": "met mast",
+            "coordinates": {
+            "Latitude": 56.833694,
+            "Longitude": 36.684791
+            }
+        }
+    ],
+    "WTG": {
         "name": "Adwen AD8-180",
         "hub-height": 150,
         "rotor-diameter": 180,
         "coordinates": {
-            "GK-Easting": 197888.7,
-            "GK-Northing": 1818181.98
+            "Latitude": 53.550781,
+            "Longitude": 8.622744
         }
     },
-    "WTG-obstacles": [
+    "WTG-obstacle-set": [
         {
-            "name": "Vestas V47 (17448)",
-            "hub-height": 50,
-            "rotor-diameter": 120,
-            "in-operation": false,
+            "name": "AD5-116 (Lehe-1)",
+            "hub-height": 110,
+            "rotor-diameter": 116,
+            "tower-diameter": 5,
+            "in-operation": true,
             "coordinates": {
-                "GK-Easting": 197888.7,
-                "GK-Northing": 1818181.98
+                "Latitude": 53.561207,
+                "Longitude": 8.622948
             }
         },
         {
-            "name": "Vestas V47 (27488)",
-            "hub-height": 50,
-            "rotor-diameter": 120,
+            "name": "AD5-116 (Lehe-2)",
+            "hub-height": 110,
+            "rotor-diameter": 116,
+            "tower-diameter": 5,
+            "in-operation": false,
+            "coordinates": {
+                "Latitude": 53.556630,
+                "Longitude": 8.624490
+            }
+        },
+        {
+            "name": "Senvion 5M (1)",
+            "hub-height": 120,
+            "rotor-diameter": 126,
+            "tower-diameter": 5,
             "in-operation": true,
             "coordinates": {
-                "GK-Easting": 197890.7,
-                "GK-Northing": 1981818.8
+                "Latitude": 53.553858,
+                "Longitude": 8.631728
+            }
+        },
+        {
+            "name": "Senvion 5M (2)",
+            "hub-height": 120,
+            "rotor-diameter": 126,
+            "tower-diameter": 5,
+            "in-operation": true,
+            "coordinates": {
+                "Latitude": 53.547983,
+                "Longitude": 8.629427
+            }
+        },
+        {
+            "name": "Senvion 5M (3)",
+            "hub-height": 120,
+            "rotor-diameter": 126,
+            "tower-diameter": 5,
+            "in-operation": true,
+            "coordinates": {
+                "Latitude": 53.545727,
+                "Longitude": 8.622660
             }
         }
     ],
-    "other-obstacles": [
-        {
-            "name": "Tree",
-            "height": 50,
-            "coordinates": {
-                "GK-Easting": 197899.7,
-                "GK-Northing": 197890.7
-            }
-        },
+    "other-obstacle-set": [
         {
             "name": "BEG",
-            "height": 50,
+            "height": 60,
             "coordinates": {
-                "GK-Easting": 197889.7,
-                "GK-Northing": 197800.7
+                "Latitude": 53.547847,
+                "Longitude": 8.617918
             }
         }
     ]

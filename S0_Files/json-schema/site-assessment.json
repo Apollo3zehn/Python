@@ -4,23 +4,28 @@
     "title": "Site assessment calculation",
     "type": "object",
     "definitions": {
+        "coordinates": {
+            "type": "object",
+            "properties": {
+                "Latitude": {
+                    "type": "number"
+                },
+                "Longitude": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "Latitude",
+                "Longitude"
+            ]
+        },
         "obstacle-base": {
             "type": "object",
             "properties": {
                 "name": {
                     "type": "string"
                 },
-                "coordinates": {
-                    "type": "object",
-                    "properties": {
-                        "GK-Easting": {
-                            "type": "number"
-                        },
-                        "GK-Northing": {
-                            "type": "number"
-                        }
-                    }
-                }
+                "coordinates": { "$ref": "#/definitions/coordinates" }
             },
             "required": [
                 "name",
@@ -52,6 +57,13 @@
                 }
             ]
         },
+        "WME": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/obstacle-base" 
+                }
+            ]
+        },
         "WTG-obstacle": {
             "allOf": [
                 { 
@@ -64,10 +76,16 @@
                             "description": "If false, the WTG will be treated as a simple obstacle.",
                             "type": "boolean",
                             "default": true
+                        },
+                        "tower-diameter": {
+                            "title": "Tower diameter",
+                            "description": "Diameter of the tower in meters.",
+                            "type": "number"
                         }
                     },
                     "required": [
-                        "in-operation"
+                        "in-operation",
+                        "tower-diameter"
                     ]
                 }
             ]
@@ -91,26 +109,26 @@
         }
     },
     "properties": {
-        "coordinates-format": {
-            "type": "string",
-            "enum": ["Gauß-Krüger (GK)"],
-            "default": "Gauß-Krüger (GK)"
+        "WME-set": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/definitions/WME" }
         },
         "WTG": { "$ref": "#/definitions/WTG" },
-        "WTG-obstacles": {
+        "WTG-obstacle-set": {
             "type": "array",
             "items": { "$ref": "#/definitions/WTG-obstacle" }
         },
-        "other-obstacles": {
+        "other-obstacle-set": {
             "type": "array",
             "title": "",
             "items": { "$ref": "#/definitions/other-obstacle" }
         }
     },
     "required": [
-        "coordinates-format",
+        "WME-set",
         "WTG",
-        "WTG-obstacles",
-        "other-obstacles"
+        "WTG-obstacle-set",
+        "other-obstacle-set"
     ]
 }
