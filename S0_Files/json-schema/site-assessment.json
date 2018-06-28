@@ -109,11 +109,7 @@
         }
     },
     "properties": {
-        "WME-set": {
-            "type": "array",
-            "minItems": 1,
-            "items": { "$ref": "#/definitions/WME" }
-        },
+        "WME": { "$ref": "#/definitions/WME" },
         "WTG": { "$ref": "#/definitions/WTG" },
         "WTG-obstacle-set": {
             "type": "array",
@@ -126,7 +122,7 @@
         }
     },
     "required": [
-        "WME-set",
+        "WME",
         "WTG",
         "WTG-obstacle-set",
         "other-obstacle-set"

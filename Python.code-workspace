@@ -21,13 +21,14 @@
 			},
 		],
 		"jupyter.appendResults": true,
-		"python.pythonPath": "${env.LOCALAPPDATA}\\Programs\\Python\\Python36\\python.exe",
+		// "python.pythonPath": "${env.LOCALAPPDATA}\\Programs\\Python\\Python36\\python.exe",
+		"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
 		"python.linting.pylintArgs": [
 			"--init-hook",
 			"import sys; sys.path.insert(0, 'S1_Framework'); sys.path.insert(0, 'S2_Internal')",
 			"--disable",
 			"C0103,C0111,C0122,C0301,C0303,C0304,C0413,W0401"
 		],
-		"python.unitTest.pyTestEnabled": true
+		"python.unitTest.pyTestEnabled": true,
 	}
 }

@@ -1,15 +1,13 @@
 {
-    "WME-set": [
-        {
-            "name": "met mast",
-            "coordinates": {
-                "Latitude": 53.554582,
-                "Longitude": 8.622380
-            }
+    "WME": {
+        "name": "met mast",
+        "coordinates": {
+            "Latitude": 53.554582,
+            "Longitude": 8.622380
         }
-    ],
+    },
     "WTG": {
-        "name": "Adwen AD8-180",
+        "name": "AD5-135 (Lehe-3)",
         "hub-height": 150,
         "rotor-diameter": 180,
         "coordinates": {
@@ -23,7 +21,7 @@
             "hub-height": 110,
             "rotor-diameter": 116,
             "tower-diameter": 5,
-            "in-operation": true,
+            "in-operation": false,
             "coordinates": {
                 "Latitude": 53.561207,
                 "Longitude": 8.622948
@@ -34,7 +32,7 @@
             "hub-height": 110,
             "rotor-diameter": 116,
             "tower-diameter": 5,
-            "in-operation": false,
+            "in-operation": true,
             "coordinates": {
                 "Latitude": 53.556630,
                 "Longitude": 8.624490

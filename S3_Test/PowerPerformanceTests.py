@@ -3,7 +3,7 @@ import json
 import logging
 
 from S1_Framework import Serialization
-from S2_Internal import PowerPerformance
+from S2_Internal.IEC_61400_12 import SiteAssessment
 
 # https://code.visualstudio.com/docs/languages/json#_mapping-in-the-user-settings
 # https://www.deine-berge.de/Rechner/Koordinaten/Dezimal/51.525904,8.607483
@@ -19,7 +19,7 @@ def GeneralTest():
         data = json.load(fileStream)
     
     # configuration = Serialization.ToDynamic(data)
-    configuration = Serialization.Deserialize(data, PowerPerformance.SiteAssessment.Configuration)
-    PowerPerformance.SiteAssessment.Calculate(configuration, logger)
+    configuration = Serialization.Deserialize(data, SiteAssessment.Configuration)
+    SiteAssessment.Calculate(configuration, logger)
 
     raise Exception()
