@@ -18,8 +18,7 @@ def GeneralTest():
     with open(filePath) as fileStream:
         data = json.load(fileStream)
     
-    # configuration = Serialization.ToDynamic(data)
     configuration = Serialization.Deserialize(data, SiteAssessment.Configuration)
-    SiteAssessment.Calculate(configuration, logger)
+    configuration = SiteAssessment.Calculate(configuration, logger)
 
     raise Exception()

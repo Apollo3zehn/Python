@@ -8,8 +8,8 @@
     },
     "WTG": {
         "name": "AD5-135 (Lehe-3)",
-        "hub-height": 150,
-        "rotor-diameter": 180,
+        "hub-height": 130,
+        "rotor-diameter": 135,
         "coordinates": {
             "Latitude": 53.550781,
             "Longitude": 8.622744
@@ -20,7 +20,7 @@
             "name": "AD5-116 (Lehe-1)",
             "hub-height": 110,
             "rotor-diameter": 116,
-            "tower-diameter": 5,
+            "tower-base-diameter": 5,
             "in-operation": false,
             "coordinates": {
                 "Latitude": 53.561207,
@@ -31,7 +31,7 @@
             "name": "AD5-116 (Lehe-2)",
             "hub-height": 110,
             "rotor-diameter": 116,
-            "tower-diameter": 5,
+            "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
                 "Latitude": 53.556630,
@@ -42,7 +42,7 @@
             "name": "Senvion 5M (1)",
             "hub-height": 120,
             "rotor-diameter": 126,
-            "tower-diameter": 5,
+            "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
                 "Latitude": 53.553858,
@@ -53,7 +53,7 @@
             "name": "Senvion 5M (2)",
             "hub-height": 120,
             "rotor-diameter": 126,
-            "tower-diameter": 5,
+            "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
                 "Latitude": 53.547983,
@@ -64,11 +64,22 @@
             "name": "Senvion 5M (3)",
             "hub-height": 120,
             "rotor-diameter": 126,
-            "tower-diameter": 5,
+            "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
                 "Latitude": 53.545727,
                 "Longitude": 8.622660
+            }
+        },
+        {
+            "name": "Fictional small WTG",
+            "hub-height": 20,
+            "rotor-diameter": 10,
+            "tower-base-diameter": 0.4,
+            "in-operation": true,
+            "coordinates": {
+                "Latitude": 53.551357,
+                "Longitude": 8.627901
             }
         }
     ],
@@ -76,6 +87,7 @@
         {
             "name": "BEG",
             "height": 60,
+            "width": 20,
             "coordinates": {
                 "Latitude": 53.547847,
                 "Longitude": 8.617918

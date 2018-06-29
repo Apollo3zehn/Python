@@ -77,15 +77,15 @@
                             "type": "boolean",
                             "default": true
                         },
-                        "tower-diameter": {
+                        "tower-base-diameter": {
                             "title": "Tower diameter",
-                            "description": "Diameter of the tower in meters.",
+                            "description": "Diameter of the tower base in meters.",
                             "type": "number"
                         }
                     },
                     "required": [
                         "in-operation",
-                        "tower-diameter"
+                        "tower-base-diameter"
                     ]
                 }
             ]
@@ -99,10 +99,14 @@
                     "properties": {
                         "height": {
                             "type": "number"
+                        },
+                        "width": {
+                            "type": "number"
                         }
                     },
                     "required": [
-                        "height"
+                        "height",
+                        "width"
                     ]
                 }
             ]
