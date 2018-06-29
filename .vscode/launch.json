@@ -9,7 +9,7 @@
             "program": "${file}",
             "console": "externalTerminal",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}\\S1_Framework;${workspaceFolder}\\S2_Internal"
+                "PYTHONPATH": "${workspaceFolder}\\S1_Framework"
             }
         }
     ]

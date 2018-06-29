@@ -3,7 +3,7 @@ import json
 import logging
 
 from S1_Framework import Serialization
-from S2_Internal.IEC_61400_12 import SiteAssessment
+from S1_Framework.IEC_61400_12 import SiteAssessment
 
 # https://code.visualstudio.com/docs/languages/json#_mapping-in-the-user-settings
 # https://www.deine-berge.de/Rechner/Koordinaten/Dezimal/51.525904,8.607483
