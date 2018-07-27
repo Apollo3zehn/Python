@@ -1,6 +1,6 @@
 {
     "WME": {
-        "name": "met mast",
+        "name": "Met. mast",
         "coordinates": {
             "Latitude": 53.554582,
             "Longitude": 8.622380
@@ -21,7 +21,7 @@
             "hub-height": 110,
             "rotor-diameter": 116,
             "tower-base-diameter": 5,
-            "in-operation": false,
+            "in-operation": true,
             "coordinates": {
                 "Latitude": 53.561207,
                 "Longitude": 8.622948
@@ -32,7 +32,7 @@
             "hub-height": 110,
             "rotor-diameter": 116,
             "tower-base-diameter": 5,
-            "in-operation": true,
+            "in-operation": false,
             "coordinates": {
                 "Latitude": 53.556630,
                 "Longitude": 8.624490

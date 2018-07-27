@@ -1,6 +1,7 @@
-import os
 import json
 import logging
+import math
+import os
 
 from S1_Framework import Serialization
 from S1_Framework.IEC_61400_12 import SiteAssessment
@@ -19,6 +20,18 @@ def GeneralTest():
         data = json.load(fileStream)
     
     configuration = Serialization.Deserialize(data, SiteAssessment.Configuration)
-    configuration = SiteAssessment.Calculate(configuration, logger)
+    configuration.Initialize()
+
+    analyzerParameters = {
+        "MinSectorWidth": math.radians(20)
+    }
+
+    analyzer = SiteAssessment.Analyzer(configuration, analyzerParameters)
+
+    printer = SiteAssessment.Printer(analyzer)
+    printer.Print(logger)
+
+    plotter = SiteAssessment.Plotter(analyzer)
+    plotter.Plot()
 
     raise Exception()
