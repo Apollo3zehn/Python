@@ -87,7 +87,8 @@
         {
             "name": "BEG",
             "height": 60,
-            "width": 20,
+            "width-wtg": 20,
+            "width-wme": 4,
             "coordinates": {
                 "Latitude": 53.547847,
                 "Longitude": 8.617918

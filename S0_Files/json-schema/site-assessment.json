@@ -8,9 +8,13 @@
             "type": "object",
             "properties": {
                 "Latitude": {
+                    "title": "Latitude",
+                    "description": "Decimal WGS 84 latitude value of the object coordinates.",
                     "type": "number"
                 },
                 "Longitude": {
+                    "title": "Longitude",
+                    "description": "Decimal WGS 84 longitude value of the object coordinates.",
                     "type": "number"
                 }
             },
@@ -23,9 +27,15 @@
             "type": "object",
             "properties": {
                 "name": {
+                    "title": "Name",
+                    "description": "Display name of the object.",
                     "type": "string"
                 },
-                "coordinates": { "$ref": "#/definitions/coordinates" }
+                "coordinates": { 
+                    "$ref": "#/definitions/coordinates",
+                    "title": "Coordinates",
+                    "description": "Decimal WGS 84 coordinates of the object."
+                }
             },
             "required": [
                 "name",
@@ -98,30 +108,51 @@
                 {
                     "properties": {
                         "height": {
+                            "title": "Height",
+                            "description": "Height of the obstacle in meters.",
                             "type": "number"
                         },
-                        "width": {
+                        "width-wtg": {
+                            "title": "Width (WTG)",
+                            "description": "Width of the obstacle in meters as seen from the WTG under test.",
+                            "type": "number"
+                        },
+                        "width-wme": {
+                            "title": "Width (WME)",
+                            "description": "Width of the obstacle in meters as seen from the WME.",
                             "type": "number"
                         }
                     },
                     "required": [
                         "height",
-                        "width"
+                        "width-wtg",
+                        "width-wme"
                     ]
                 }
             ]
         }
     },
     "properties": {
-        "WME": { "$ref": "#/definitions/WME" },
-        "WTG": { "$ref": "#/definitions/WTG" },
+        "WME": { 
+            "title": "Wind measurement equipment",
+            "description": "The wind measurement equipment like met mast, lidar oder sodar.",
+            "$ref": "#/definitions/WME" 
+        },
+        "WTG": { 
+            "title": "Wind turbine generator",
+            "description": "The wind turbine under test.",
+            "$ref": "#/definitions/WTG"
+        },
         "WTG-obstacle-set": {
+            "title": "List of wind turbine obstacles",
+            "description": "Nearby wind turbines (operating or stopped) may disturb the WTG under test or the WME and must be considered as disturbance sources.",
             "type": "array",
             "items": { "$ref": "#/definitions/WTG-obstacle" }
         },
         "other-obstacle-set": {
+            "title": "List of other obstacles",
+            "description": "Other obstacles like buildings may disturb the WTG under test or the WME and must be considered as disturbance sources.",
             "type": "array",
-            "title": "",
             "items": { "$ref": "#/definitions/other-obstacle" }
         }
     },
