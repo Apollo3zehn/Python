@@ -1,6 +1,5 @@
 import json
 import logging
-import math
 import os
 import tempfile
 import uuid
@@ -22,10 +21,7 @@ configuration = Serialization.Deserialize(data, SiteAssessment.Configuration)
 configuration.Initialize()
 
 # analyze configuration
-analyzerParameters = SiteAssessment.AnalyzerParameters()
-analyzerParameters.MinSectorWidth = math.radians(20)
-
-analyzer = SiteAssessment.Analyzer(configuration, analyzerParameters)
+analyzer = SiteAssessment.Analyzer(configuration)
 
 # 1 - print results to logger
 logger = logging.getLogger("SiteAssessmentSample")

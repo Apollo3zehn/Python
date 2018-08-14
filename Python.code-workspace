@@ -17,7 +17,7 @@
 				"fileMatch": [
 					"/*.site-assessment.json"
 				],
-				"url": "./S0_Files/json-schema/site-assessment.json"
+				"url": "./S0_Files/json-schema/site-assessment/1.0.0.json"
 			},
 		],
 		"jupyter.appendResults": true,

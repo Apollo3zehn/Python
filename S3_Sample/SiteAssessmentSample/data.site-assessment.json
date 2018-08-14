@@ -94,5 +94,16 @@
                 "Longitude": 8.617918
             }
         }
-    ]
+    ],
+    "satellite-map-settings": {
+        "source": "Google Maps",
+        "zoom-level": 14,
+        "scale-factor": 1.29,
+        "offset-x": 0,
+        "offset-y": 0
+    },
+    "general-settings": {
+        "min-sector-width": 20,
+        "min-sector-radius": 1000
+    }
 }
