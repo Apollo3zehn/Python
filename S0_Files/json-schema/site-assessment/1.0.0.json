@@ -3,23 +3,42 @@
     "title": "Site assessment calculation",
     "type": "object",
     "definitions": {
+        "sector": {
+            "type": "object",
+            "properties": {
+                "min": {
+                    "title": "Minimum angle",
+                    "description": "The minimum angle of the sector in degrees.",
+                    "type": "number"
+                },
+                "max": {
+                    "title": "Maximum angle",
+                    "description": "The maximum angle of the sector in degrees.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "min",
+                "max"
+            ]
+        },
         "coordinates": {
             "type": "object",
             "properties": {
-                "Latitude": {
+                "latitude": {
                     "title": "Latitude",
                     "description": "Decimal WGS 84 latitude value of the object coordinates.",
                     "type": "number"
                 },
-                "Longitude": {
+                "longitude": {
                     "title": "Longitude",
                     "description": "Decimal WGS 84 longitude value of the object coordinates.",
                     "type": "number"
                 }
             },
             "required": [
-                "Latitude",
-                "Longitude"
+                "latitude",
+                "longitude"
             ]
         },
         "obstacle-base": {
@@ -196,11 +215,18 @@
                     "description": "This setting affects the axis limits.",
                     "type": "number",
                     "default": 1000.0
+                },
+                "excluded-sector-set": {
+                    "title": "Exluded sectors.",
+                    "description": "List of additional sectors to exclude from the final valid sector, e.g pointing in direction of flow disturbing terrain.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/sector" }
                 }
             },
             "required": [
                 "min-sector-width",
-                "min-sector-radius"
+                "min-sector-radius",
+                "excluded-sector-set"
             ]
         }
     },

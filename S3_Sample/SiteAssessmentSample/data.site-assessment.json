@@ -2,8 +2,8 @@
     "WME": {
         "name": "Met. mast",
         "coordinates": {
-            "Latitude": 53.554582,
-            "Longitude": 8.622380
+            "latitude": 53.554582,
+            "longitude": 8.622380
         }
     },
     "WTG": {
@@ -11,8 +11,8 @@
         "hub-height": 130,
         "rotor-diameter": 135,
         "coordinates": {
-            "Latitude": 53.550781,
-            "Longitude": 8.622744
+            "latitude": 53.550781,
+            "longitude": 8.622744
         }
     },
     "WTG-obstacle-set": [
@@ -23,8 +23,8 @@
             "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
-                "Latitude": 53.561207,
-                "Longitude": 8.622948
+                "latitude": 53.561207,
+                "longitude": 8.622948
             }
         },
         {
@@ -34,8 +34,8 @@
             "tower-base-diameter": 5,
             "in-operation": false,
             "coordinates": {
-                "Latitude": 53.556630,
-                "Longitude": 8.624490
+                "latitude": 53.556630,
+                "longitude": 8.624490
             }
         },
         {
@@ -45,8 +45,8 @@
             "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
-                "Latitude": 53.553858,
-                "Longitude": 8.631728
+                "latitude": 53.553858,
+                "longitude": 8.631728
             }
         },
         {
@@ -56,8 +56,8 @@
             "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
-                "Latitude": 53.547983,
-                "Longitude": 8.629427
+                "latitude": 53.547983,
+                "longitude": 8.629427
             }
         },
         {
@@ -67,8 +67,8 @@
             "tower-base-diameter": 5,
             "in-operation": true,
             "coordinates": {
-                "Latitude": 53.545727,
-                "Longitude": 8.622660
+                "latitude": 53.545727,
+                "longitude": 8.622660
             }
         },
         {
@@ -78,8 +78,8 @@
             "tower-base-diameter": 0.4,
             "in-operation": true,
             "coordinates": {
-                "Latitude": 53.551357,
-                "Longitude": 8.627901
+                "latitude": 53.551357,
+                "longitude": 8.627901
             }
         }
     ],
@@ -90,8 +90,8 @@
             "width-wtg": 20,
             "width-wme": 4,
             "coordinates": {
-                "Latitude": 53.547847,
-                "Longitude": 8.617918
+                "latitude": 53.547847,
+                "longitude": 8.617918
             }
         }
     ],
@@ -104,6 +104,12 @@
     },
     "general-settings": {
         "min-sector-width": 20,
-        "min-sector-radius": 1000
+        "min-sector-radius": 1000,
+        "excluded-sector-set": [
+            {
+                "min": 280,
+                "max": 290
+            }
+        ]
     }
 }

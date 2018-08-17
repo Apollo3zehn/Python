@@ -66,6 +66,9 @@ def Deserialize(data, cls):
             else:
                 setattr(instance, name, value)
 
+        if hasattr(instance, "OnDeserialized"):
+            instance.OnDeserialized()
+
         return instance
 
 def GetAnnotations(cls):

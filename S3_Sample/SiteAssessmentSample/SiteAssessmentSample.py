@@ -4,10 +4,17 @@ import os
 import tempfile
 import uuid
 
+import numpy
+from numpy import ndarray
+from PIL import Image
+
 from S1_Framework import Serialization
 from S1_Framework.IEC_61400_12 import SiteAssessment
 
+imgData: Image
+heightMap: ndarray
 configFilePath: str
+heightMapFilePath: str
 tempFilePath: str
 logger: logging.Logger
 
@@ -20,8 +27,14 @@ with open(configFilePath) as fileStream:
 configuration = Serialization.Deserialize(data, SiteAssessment.Configuration)
 configuration.Initialize()
 
+# load height map data
+heightMapFilePath = os.path.join(os.path.dirname(os.path.realpath(__file__)), "height_map.png")   
+imgData = numpy.array(Image.open(heightMapFilePath))
+heightMap = imgData[..., 0]
+heightMap = heightMap[:-1, :-1] * 2 - 40
+
 # analyze configuration
-analyzer = SiteAssessment.Analyzer(configuration)
+analyzer = SiteAssessment.Analyzer(configuration, heightMap)
 
 # 1 - print results to logger
 logger = logging.getLogger("SiteAssessmentSample")

@@ -17,12 +17,12 @@ baseTargetDirectoryPath = os.path.join(tempfile.gettempdir(), f"{ str(uuid.uuid4
 print(f"Copying files to folder { baseTargetDirectoryPath }.")
 
 # S0_Files -> json-schema
-sourceDirectoryPath = os.path.join(baseSourceDirectoryPath, "S0_Files", "json-schema")
+sourceDirectoryPath = os.path.join(baseSourceDirectoryPath, "S0_Files", "json-schema", "site-assessment")
 targetDirectoryPath = sourceDirectoryPath.replace(baseSourceDirectoryPath, baseTargetDirectoryPath)
 
 os.makedirs(targetDirectoryPath)
 
-shutil.copyfile(os.path.join(sourceDirectoryPath, "site-assessment.json"), os.path.join(targetDirectoryPath, "site-assessment.json"))
+shutil.copyfile(os.path.join(sourceDirectoryPath, "1.0.0.json"), os.path.join(targetDirectoryPath, "1.0.0.json"))
 
 # S1_Framework
 sourceDirectoryPath = os.path.join(baseSourceDirectoryPath, "S1_Framework")
@@ -46,12 +46,13 @@ sourceDirectoryPath = os.path.join(baseSourceDirectoryPath, "S3_Sample", "SiteAs
 targetDirectoryPath = baseTargetDirectoryPath
 
 shutil.copyfile(os.path.join(sourceDirectoryPath, "data.site-assessment.json"), os.path.join(targetDirectoryPath, "data.site-assessment.json"))
+shutil.copyfile(os.path.join(sourceDirectoryPath, "height_map.png"), os.path.join(targetDirectoryPath, "height_map.png"))
 shutil.copyfile(os.path.join(sourceDirectoryPath, "SiteAssessmentSample.py"), os.path.join(targetDirectoryPath, "SiteAssessmentSample.py"))
 
 with open(os.path.join(targetDirectoryPath, "data.site-assessment.json"), "r") as fh:
     fileContent = fh.readlines()
 
-fileContent.insert(1, '    "$schema": ".\\\\S0_Files\\\\json-schema\\\\site-assessment.json",\n')
+fileContent.insert(1, '    "$schema": ".\\\\S0_Files\\\\json-schema\\\\site-assessment\\\\1.0.0.json",\n')
 
 with open(os.path.join(targetDirectoryPath, "data.site-assessment.json"), "w") as fh:
     fh.writelines(fileContent)
