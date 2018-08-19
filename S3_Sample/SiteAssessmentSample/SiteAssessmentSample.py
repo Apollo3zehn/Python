@@ -4,6 +4,7 @@ import os
 import tempfile
 import uuid
 
+import matplotlib.pyplot as plt
 import numpy
 from numpy import ndarray
 from PIL import Image
@@ -53,4 +54,8 @@ print(f"Results have been written to file { tempFilePath }.")
 
 # 3 - plot results using matplotlib
 plotter = SiteAssessment.Plotter(analyzer)
-plotter.Plot()
+
+plotResult = plotter.PreparePlot()
+plotResult.Wtg.Axis.set_title("I hijacked this title.")
+
+plt.show()
