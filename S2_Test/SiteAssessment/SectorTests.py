@@ -34,8 +34,8 @@ def ShouldNotContainAngleAtUpperBoundTest():
 @pytest.mark.parametrize("direction, width, expectedMinDirection, expectedMaxDirection", [(0, 20, 350, 10), (-50, 180, 220, 40), (270, 180, 180, 0)])
 def ShouldCalculateMinDirectionTest(direction: float, width: float, expectedMinDirection: float, expectedMaxDirection: float):
     sector = Sector.FromDirection(math.radians(direction), math.radians(width))
-    assert math.isclose(sector.Min, math.radians(expectedMinDirection), rel_tol=1e-6) and \
-           math.isclose(sector.Max, math.radians(expectedMaxDirection), rel_tol=1e-6)
+    assert math.isclose(sector.Min, math.radians(expectedMinDirection), abs_tol=1e-6) and \
+           math.isclose(sector.Max, math.radians(expectedMaxDirection), abs_tol=1e-6)
 
 @pytest.mark.parametrize("minDirection, maxDirection, expectedDirection, expectedWidth", [
     (-5, 91, 43, 96),
@@ -43,5 +43,5 @@ def ShouldCalculateMinDirectionTest(direction: float, width: float, expectedMinD
 ])
 def ShouldCreateSectorTest(minDirection: float, maxDirection: float, expectedDirection: float, expectedWidth: float):
     sector = Sector.FromBoundaries(math.radians(minDirection), math.radians(maxDirection))
-    assert math.isclose(sector.Direction, math.radians(expectedDirection), rel_tol=1e-6) and \
-           math.isclose(sector.Width, math.radians(expectedWidth), rel_tol=1e-6)
+    assert math.isclose(sector.Direction, math.radians(expectedDirection), abs_tol=1e-6) and \
+           math.isclose(sector.Width, math.radians(expectedWidth), abs_tol=1e-6)

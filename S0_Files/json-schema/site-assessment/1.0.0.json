@@ -221,6 +221,12 @@
                     "description": "List of additional sectors to exclude from the final valid sector, e.g pointing in direction of flow disturbing terrain.",
                     "type": "array",
                     "items": { "$ref": "#/definitions/sector" }
+                },
+                "terrain-height-set": {
+                    "title": "Terrain heights for contour plot.",
+                    "description": "The height values are used by the terrain contour plot.",
+                    "type": "array",
+                    "items": { "type": "number" }
                 }
             },
             "required": [

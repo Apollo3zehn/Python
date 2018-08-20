@@ -12,7 +12,7 @@ from PIL import Image
 from S1_Framework import Serialization
 from S1_Framework.IEC_61400_12 import SiteAssessment
 
-imgData: Image
+image: Image
 heightMap: ndarray
 configFilePath: str
 heightMapFilePath: str
@@ -30,12 +30,12 @@ configuration.Initialize()
 
 # load height map data
 heightMapFilePath = os.path.join(os.path.dirname(os.path.realpath(__file__)), "height_map.png")   
-imgData = numpy.array(Image.open(heightMapFilePath))
-heightMap = imgData[..., 0]
+image = numpy.array(Image.open(heightMapFilePath))
+heightMap = image[..., 0]
 heightMap = heightMap[:-1, :-1] * 2 - 40
 
 # analyze configuration
-analyzer = SiteAssessment.Analyzer(configuration, heightMap)
+analyzer = SiteAssessment.Analyzer(configuration, heightMapWtg=heightMap, heightMapWme=heightMap)
 
 # 1 - print results to logger
 logger = logging.getLogger("SiteAssessmentSample")

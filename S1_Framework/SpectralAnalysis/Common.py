@@ -8,8 +8,10 @@
 # AmplitudePhase = fft(Data, FftLength) / Frequency;
 
 from typing import List
+
 import numpy
 from scipy import fftpack
+
 
 def FFT(data: list, samplingFrequency: int, zeroPadding: bool) -> (List[float], List[float], List[float]):
 

@@ -61,5 +61,5 @@ def ShouldCreateSectorTest(relativeDistance: float, expectedWidth: float):
     location = 100+0j
     sector = disturbedObject.ToSector(location, 100 / relativeDistance)
 
-    assert math.isclose(sector.Direction, math.radians(90), rel_tol=1e-3) and \
-           math.isclose(sector.Width, math.radians(expectedWidth), rel_tol=1e-3)
+    assert math.isclose(sector.Direction, math.radians(90), abs_tol=1e-3) and \
+           math.isclose(sector.ZeroWidth, math.radians(expectedWidth), abs_tol=1e-3)

@@ -1,4 +1,5 @@
 import inspect
+import numbers
 
 from . import Convention
 
@@ -52,22 +53,35 @@ def Deserialize(data, cls):
 
         return instance
         
+    elif isinstance(data, numbers.Number):
+        return data
+
     else:
 
         instance: cls = cls()
 
-        for name, value in data.items():
+        try:
             
-            name = Convention.KebapCaseToPascalCase(name)
-            fieldType = annotations.get(name)
+            for name, value in data.items():
 
-            if inspect.isclass(fieldType) and isinstance(value, (dict, tuple, list, set, frozenset)):
-                setattr(instance, name, Deserialize(value, fieldType))
-            else:
-                setattr(instance, name, value)
+                if name == "terrain-height-set":
+                    a = 1
 
-        if hasattr(instance, "OnDeserialized"):
-            instance.OnDeserialized()
+                name = Convention.KebapCaseToPascalCase(name)
+                fieldType = annotations.get(name)
+
+                if inspect.isclass(fieldType) and isinstance(value, (dict, tuple, list, set, frozenset)):
+                    setattr(instance, name, Deserialize(value, fieldType))
+                else:
+                    setattr(instance, name, value)
+
+            if hasattr(instance, "OnDeserialized"):
+                instance.OnDeserialized()
+
+        except Exception as identifier:
+            pass
+
+        
 
         return instance
 
