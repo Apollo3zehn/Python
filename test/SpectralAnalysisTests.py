@@ -1,5 +1,5 @@
 import numpy
-from S1_Framework import SpectralAnalysis
+from src import SpectralAnalysis
 
 def FFTGeneralTest():
 

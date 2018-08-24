@@ -1,7 +1,6 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Python",
             "type": "pythonExperimental",
@@ -9,7 +8,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "env": {
-                "PYTHONPATH": "${workspaceFolder}\\S1_Framework"
+                "PYTHONPATH": "${workspaceFolder}\\src"
             }
         }
     ]

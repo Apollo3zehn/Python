@@ -9,8 +9,8 @@ import numpy
 from numpy import ndarray
 from PIL import Image
 
-from S1_Framework import Serialization
-from S1_Framework.IEC_61400_12 import SiteAssessment
+from src import Serialization
+from src.IEC_61400_12 import SiteAssessment
 
 image: Image
 heightMap: ndarray
