@@ -5,6 +5,14 @@
 		}
 	],
 	"settings": {
+		"json.schemas": [
+			{
+				"fileMatch": [
+					"/*.site-assessment.json"
+				],
+				"url": "./support/json-schema/site-assessment/1.0.0.json"
+			}
+		],
 		"files.exclude": {
 			"**/__pycache__*": true,
 			"**/.noseids": true,
@@ -12,14 +20,6 @@
 			".gitignore": true,
 			".vscode": false,
 		},
-		"json.schemas": [
-			{
-				"fileMatch": [
-					"/*.site-assessment.json"
-				],
-				"url": "./support/json-schema/site-assessment/1.0.0.json"
-			},
-		],
 		"jupyter.appendResults": true,
 		// "python.pythonPath": "${env.LOCALAPPDATA}\\Programs\\Python\\Python36\\python.exe",
 		"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
