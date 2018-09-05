@@ -1,4 +1,4 @@
-**/IEC_61400_12
+tool/
 
 **/.pytest_cache
 **/__pycache__

@@ -60,28 +60,18 @@ def Deserialize(data, cls):
 
         instance: cls = cls()
 
-        try:
-            
-            for name, value in data.items():
+        for name, value in data.items():
 
-                if name == "terrain-height-set":
-                    a = 1
+            name = Convention.KebapCaseToPascalCase(name)
+            fieldType = annotations.get(name)
 
-                name = Convention.KebapCaseToPascalCase(name)
-                fieldType = annotations.get(name)
+            if inspect.isclass(fieldType) and isinstance(value, (dict, tuple, list, set, frozenset)):
+                setattr(instance, name, Deserialize(value, fieldType))
+            else:
+                setattr(instance, name, value)
 
-                if inspect.isclass(fieldType) and isinstance(value, (dict, tuple, list, set, frozenset)):
-                    setattr(instance, name, Deserialize(value, fieldType))
-                else:
-                    setattr(instance, name, value)
-
-            if hasattr(instance, "OnDeserialized"):
-                instance.OnDeserialized()
-
-        except Exception as identifier:
-            pass
-
-        
+        if hasattr(instance, "OnDeserialized"):
+            instance.OnDeserialized()
 
         return instance
 
