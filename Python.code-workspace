@@ -10,7 +10,7 @@
 				"fileMatch": [
 					"/*.site-assessment.json"
 				],
-				"url": "./support/json-schema/site-assessment/1.0.0.json"
+				"url": "./tool/support/SiteAssessment/1.0.0.json"
 			}
 		],
 		"files.exclude": {

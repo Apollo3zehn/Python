@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Python",
-            "type": "pythonExperimental",
+            "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
