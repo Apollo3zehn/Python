@@ -5,14 +5,6 @@
 		}
 	],
 	"settings": {
-		"json.schemas": [
-			{
-				"fileMatch": [
-					"/*.site-assessment.json"
-				],
-				"url": "./tool/support/SiteAssessment/1.0.0.json"
-			}
-		],
 		"files.exclude": {
 			"**/__pycache__*": true,
 			"**/.noseids": true,
@@ -21,8 +13,6 @@
 			".vscode": false,
 		},
 		"jupyter.appendResults": true,
-		// "python.pythonPath": "${env.LOCALAPPDATA}\\Programs\\Python\\Python36\\python.exe",
-		"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
 		"python.linting.pylintArgs": [
 			"--init-hook",
 			"import sys; sys.path.insert(0, 'src')",
