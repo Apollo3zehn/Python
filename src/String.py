@@ -1,2 +1,2 @@
 def IsNullOrWhiteSpace(value: str):
-    return value is None or value.isspace()
+    return not value or value.isspace()
