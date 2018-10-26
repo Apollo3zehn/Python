@@ -12,8 +12,7 @@
 			".gitignore": true,
 			".vscode": false,
 		},
-		//"python.pythonPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python36_64\\python.exe",
-		"python.pythonPath": "/usr/bin/python3.5",
+		"python.pythonPath": "python",
 		"python.linting.pylintArgs": [
 			"--disable",
 			"C0103,C0111,C0301,C0304,C0413,W0401,PW0703"

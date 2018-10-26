@@ -3,7 +3,7 @@
 bash / cmd:
 
 ```console
-git clone https://github.com/Apollo3zehn/Python-CherryPy-Sample
+git clone <path to repository>
 
 pip install websockets
 pip install cherrypy
