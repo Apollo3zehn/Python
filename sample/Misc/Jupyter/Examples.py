@@ -1,9 +1,3 @@
-# https://github.com/Microsoft/vscode-python
-# https://github.com/DonJayamanne/vscodejupyter
-
-# fixes:
-# - https://github.com/DonJayamanne/vscodeJupyter/commit/508ca40c862f37b0182d55108534ea688d5d4173
-
 #%%
 from bokeh.io import output_notebook, show
 from bokeh.plotting import figure
