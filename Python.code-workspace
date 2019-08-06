@@ -12,13 +12,12 @@
 			".gitignore": true,
 			".vscode": false,
 		},
-		"jupyter.appendResults": true,
 		"python.linting.pylintArgs": [
 			"--init-hook",
 			"import sys; sys.path.insert(0, 'src')",
 			"--disable",
 			"C0103,C0111,C0122,C0301,C0303,C0304,C0412,C0413,W0401,W0703"
 		],
-		"python.unitTest.pyTestEnabled": true,
+		"python.testing.pytestEnabled": true
 	}
 }
