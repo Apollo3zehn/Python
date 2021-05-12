@@ -6,7 +6,7 @@
     "@types/jquery": "3.3.1",
     "@types/knockout": "3.4.54",
     "bootstrap": "4.3.1",
-    "chart.js": "2.7.2",
+    "chart.js": "2.9.4",
     "font-awesome": "4.7.0",
     "jquery": "3.4.0",
     "knockout": "3.5.0-rc",
