@@ -10,7 +10,7 @@
     "font-awesome": "4.7.0",
     "jquery": "3.4.0",
     "knockout": "3.5.0",
-    "moment": "2.22.1",
+    "moment": "2.29.2",
     "popper.js": "1.14.3"
   }
 }
